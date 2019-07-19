@@ -8,6 +8,11 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+
+/**
+	没有意义
+*/
+
 @Configuration
 public class BeetlConf {
     @Value("templates") String templatesPath;//模板根目录 ，比如 "templates"
