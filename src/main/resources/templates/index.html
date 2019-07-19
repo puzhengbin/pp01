@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>这是主页</title>
+</head>
+
+<link
+        rel="stylesheet"
+        type="text/css"
+        href="${ctxPath}/easyui/themes/default/easyui.css"
+/>
+<link rel="stylesheet" type="text/css" href="${ctxPath}/easyui/themes/icon.css" />
+<script type="text/javascript" src="${ctxPath}/easyui/jquery.min.js"></script>
+<script type="text/javascript" src="${ctxPath}/easyui/jquery.easyui.min.js"></script>
+<body>
+    大家好我是+${userName}
+<%
+    for(var i=0;i<3;i++){
+    %>
+    <p>hello,world</p>
+<%}%>
+
+    <div
+            id="p"
+            class="easyui-panel"
+            style="width:500px;height:200px;padding:10px;"
+            title="${titleLab}"
+            data-options="iconCls:'icon-save',collapsible:true"
+    >
+        The panel content
+    </div>
+    <input
+            class="easyui-combobox"
+            name="language"
+            data-options="
+        url:'combobox_data.json',
+        valueField:'id',
+        textField:'text',
+        panelHeight:'auto',
+        onSelect:function(record){
+        alert(record.text)
+        }"
+    />
+
+    <p>
+     hello,;
+    </p>
+
+</body>
+</html>

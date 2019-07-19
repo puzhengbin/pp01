@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="easyui/themes/default/easyui.css"
+    />
+    <link rel="stylesheet" type="text/css" href="themes/icon.css" />
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.easyui.min.js"></script>
+  </head>
+  <body>
+    <div
+      id="p"
+      class="easyui-panel"
+      style="width:500px;height:200px;padding:10px;"
+      title="My Panel"
+      data-options="iconCls:'icon-save',collapsible:true"
+    >
+      The panel content
+    </div>
+    <input
+      class="easyui-combobox"
+      name="language"
+      data-options="
+        url:'combobox_data.json',
+        valueField:'id',
+        textField:'text',
+        panelHeight:'auto',
+        onSelect:function(record){
+        alert(record.text)
+        }"
+    />
+  </body>
+</html>
